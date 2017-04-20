@@ -1,0 +1,24 @@
+{
+  "name": "smart-next-tick",
+  "version": "1.0.0-alpha.0",
+  "description": "",
+  "main": "nextTick.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nextTick",
+    "setImmediate",
+    "setTimeout"
+  ],
+  "author": "lon",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnlon/smart-next-tick.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cnlon/smart-next-tick/issues"
+  },
+  "homepage": "https://github.com/cnlon/smart-next-tick#readme"
+}
