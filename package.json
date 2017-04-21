@@ -1,6 +1,6 @@
 {
   "name": "smart-next-tick",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-beta.0",
   "description": "",
   "main": "nextTick.js",
   "scripts": {
