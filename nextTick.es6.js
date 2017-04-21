@@ -3,7 +3,7 @@ let pending = false
 function nextTickHandler () {
     pending = false
     const callbackCopies = [...callbacks]
-    callbacks = []
+    callbacks.length = 0
     for (let callback of callbackCopies) {
         callback()
     }
@@ -24,10 +24,8 @@ if (typeof process === 'object'
     })
     callNextTick = function () {
         counter = counter === 0 ? 1 : 0
-        textNode.data = counter
+        textNode.data = String(counter)
     }
-} else if (typeof setImmediate === 'function') {
-    callNextTick = setImmediate
 } else {
     callNextTick = setTimeout
 }
