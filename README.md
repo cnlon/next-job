@@ -1,5 +1,8 @@
 # smart-next-tick
 
+[![npm version](https://badge.fury.io/js/smart-next-tick.svg)](https://badge.fury.io/js/smart-next-tick)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+
 ## Another environment agnostic nextTick polyfill
 
 To be used in environment agnostic modules that need nextTick functionality.
@@ -11,7 +14,7 @@ To be used in environment agnostic modules that need nextTick functionality.
 ## Installation
 
 ```bash
-npm install smart-next-tick
+npm install --save smart-next-tick
 ```
 
 ## Syntax
