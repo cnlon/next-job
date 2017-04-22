@@ -30,8 +30,7 @@ if (typeof process === 'object'
     callNextTick = setTimeout
 }
 
-
-module.exports = function nextTick (callback, context, ...args) {
+export default function nextTick (callback, context, ...args) {
     const func = context
         ? function () {
             callback.apply(context, args)
