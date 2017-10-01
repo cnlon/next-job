@@ -8,7 +8,7 @@
 To be used in environment agnostic modules that need nextTick functionality.
 
 - When run in Node.js `process.nextTick` is used
-- In modern browsers microtask resolution is guaranteed by `MutationObserver` [[93.16%](http://caniuse.com/#search=MutationObserver)]
+- In modern browsers microtask resolution is guaranteed by `MutationObserver` [[92.74%](http://caniuse.com/#search=MutationObserver)]
 - In other engines `setTimeout(fn)` is used as fallback
 
 ## Installation
