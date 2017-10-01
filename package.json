@@ -1,25 +1,22 @@
 {
-  "name": "smart-next-tick",
-  "version": "1.0.0-beta.0",
-  "description": "",
-  "main": "nextTick.js",
-  "module": "nextTick.esm.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "nextTick",
-    "setImmediate",
-    "setTimeout"
-  ],
-  "author": "lon",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cnlon/smart-next-tick.git"
-  },
-  "bugs": {
-    "url": "https://github.com/cnlon/smart-next-tick/issues"
-  },
-  "homepage": "https://github.com/cnlon/smart-next-tick#readme"
+    "name": "smart-next-tick",
+    "version": "1.0.0",
+    "description": "Another environment agnostic nextTick polyfill",
+    "main": "nextTick.js",
+    "module": "nextTick.esm.js",
+    "keywords": [
+        "nextTick",
+        "setTimeout",
+        "setImmediate"
+    ],
+    "author": "lon (https://lon.im)",
+    "license": "MIT",
+    "homepage": "https://github.com/cnlon/smart-next-tick#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cnlon/smart-next-tick.git"
+    },
+    "bugs": {
+        "url": "https://github.com/cnlon/smart-next-tick/issues"
+    }
 }
