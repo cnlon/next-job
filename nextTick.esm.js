@@ -1,24 +1,24 @@
-let callbacks = []
-let pending = false
+var callbacks = []
+var pending = false
 function nextTickHandler () {
     pending = false
-    const callbackCopies = [...callbacks]
+    var callbackCopies = callbacks.slice(0)
     callbacks.length = 0
-    for (let callback of callbackCopies) {
-        callback()
+    for (var i = 0; i < callbackCopies.length; i++) {
+        callbackCopies[i]()
     }
 }
 
-let callNextTick
+var callNextTick
 if (typeof process === 'object'
     && process
     && typeof process.nextTick === 'function'
 ) {
     callNextTick = process.nextTick
 } else if (typeof MutationObserver !== 'undefined') {
-    let counter = 0
-    const textNode = document.createTextNode(counter)
-    const observer = new MutationObserver(nextTickHandler)
+    var counter = 0
+    var textNode = document.createTextNode(counter)
+    var observer = new MutationObserver(nextTickHandler)
     observer.observe(textNode, {
         characterData: true
     })
@@ -30,12 +30,19 @@ if (typeof process === 'object'
     callNextTick = setTimeout
 }
 
-export default function nextTick (callback, context, ...args) {
-    const func = context
-        ? function () {
+
+export default function nextTick (callback, context) {
+    var func = callback
+    if (context) {
+        var args = []
+        var l = arguments.length
+        while (--l > 1) {
+            args.unshift(arguments[l])
+        }
+        func = function () {
             callback.apply(context, args)
         }
-        : callback
+    }
     callbacks.push(func)
     if (pending) {
         return
