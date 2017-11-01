@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Another environment agnostic nextTick polyfill",
     "main": "nextTick.js",
-    "module": "nextTick.esm.js",
+    "module": "nextTick.mjs",
     "keywords": [
         "nextTick",
         "setTimeout",
