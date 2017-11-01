@@ -1,6 +1,6 @@
 {
     "name": "smart-next-tick",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Another environment agnostic nextTick polyfill",
     "main": "nextTick.js",
     "module": "nextTick.mjs",
