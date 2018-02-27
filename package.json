@@ -4,6 +4,9 @@
     "description": "Another environment agnostic nextTick polyfill",
     "main": "nextTick.js",
     "module": "nextTick.mjs",
+    "scripts": {
+        "test": "node test.js"
+    },
     "keywords": [
         "nextTick",
         "setTimeout",
