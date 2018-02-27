@@ -1,11 +1,11 @@
-# smart-next-tick
+# nextjob
 
-[![npm version](https://badge.fury.io/js/smart-next-tick.svg)](https://badge.fury.io/js/smart-next-tick)
+[![npm version](https://badge.fury.io/js/nextjob.svg)](https://badge.fury.io/js/nextjob)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
-## Another environment agnostic nextTick polyfill
+## Another environment agnostic nextJob(nextTick) polyfill
 
-To be used in environment agnostic modules that need nextTick functionality.
+To be used in environment agnostic modules that need nextJob functionality.
 
 - When run in Node.js `process.nextTick` is used
 - In modern browsers microtask resolution is guaranteed by `MutationObserver` [93.82%](http://caniuse.com/#search=MutationObserver)]
@@ -14,13 +14,13 @@ To be used in environment agnostic modules that need nextTick functionality.
 ## Installation
 
 ```bash
-npm install --save smart-next-tick
+npm install --save nextjob
 ```
 
 ## Syntax
 
 ```
-nextTick(func[, context, param1, param2, ...])
+nextJob(func[, context, param1, param2, ...])
 ```
 
 **func**
@@ -37,4 +37,4 @@ Additional parameters which are passed through to `func`.
 
 <hr>
 
-Stealed from [Vue.js](https://github.com/vuejs/vue/blob/dev/src/core/util/env.js#L66-L147) and [next-tick](https://github.com/medikoo/next-tick).
+Stealed from [Vue.js](https://github.com/vuejs/vue/blob/dev/src/core/util/next-tick.js) and [next-tick](https://github.com/medikoo/next-tick).
