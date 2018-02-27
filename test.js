@@ -1,15 +1,17 @@
-const nextJob = require('./nextJob')
+var nextJob = require('./nextJob')
 
 
-const values = []
+var values = []
 
 values.push(1)
-nextJob(() => values.push(2))
+nextJob(function () {
+    values.push(2)
+})
 values.push(3)
 
-nextJob(() => {
-    const result = values.toString()
+nextJob(function () {
+    var result = values.toString()
     if (result !== '1,3,2') {
-        throw new Error(`result: ${result}`)
+        throw new Error('result: ' + result)
     }
 })
