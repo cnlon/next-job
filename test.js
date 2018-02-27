@@ -1,13 +1,13 @@
-const nextTick = require('./nextTick')
+const nextJob = require('./nextJob')
 
 
 const values = []
 
 values.push(1)
-nextTick(() => values.push(2))
+nextJob(() => values.push(2))
 values.push(3)
 
-nextTick(() => {
+nextJob(() => {
     const result = values.toString()
     if (result !== '1,3,2') {
         throw new Error(`result: ${result}`)

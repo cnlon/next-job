@@ -1,25 +1,28 @@
 {
-    "name": "smart-next-tick",
+    "name": "next-job",
     "version": "1.1.0",
     "description": "Another environment agnostic nextTick polyfill",
-    "main": "nextTick.js",
-    "module": "nextTick.mjs",
+    "main": "nextJob.js",
+    "module": "nextJob.mjs",
     "scripts": {
         "test": "node test.js"
     },
     "keywords": [
+        "job",
+        "microtask",
         "nextTick",
+        "MutationObserver",
         "setTimeout",
         "setImmediate"
     ],
-    "author": "lon (https://lon.im)",
-    "license": "MIT",
-    "homepage": "https://github.com/cnlon/smart-next-tick#readme",
+    "homepage": "https://github.com/cnlon/next-job#readme",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/cnlon/smart-next-tick.git"
+        "url": "git+https://github.com/cnlon/next-job.git"
     },
     "bugs": {
-        "url": "https://github.com/cnlon/smart-next-tick/issues"
-    }
+        "url": "https://github.com/cnlon/next-job/issues"
+    },
+    "author": "lon (https://lon.im)",
+    "license": "MIT"
 }

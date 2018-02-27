@@ -1,6 +1,6 @@
 var callbacks = []
 var pending = false
-function nextTickHandler () {
+function nextJobHandler () {
     pending = false
     var length = callbacks.length
     if (length === 0) {
@@ -12,33 +12,33 @@ function nextTickHandler () {
     }
 }
 
-var callNextTick
+var callNextJob
 if (typeof process === 'object'
     && process !== null
     && typeof process['nextTick'] === 'function'
 ) {
-    callNextTick = process.nextTick
+    callNextJob = process.nextTick
 } else if (typeof MutationObserver !== 'undefined') {
     var a = 'a'
     var b = 'b'
     var value = a
     var commentNode = document.createComment(value)
-    var observer = new MutationObserver(nextTickHandler)
+    var observer = new MutationObserver(nextJobHandler)
     observer.observe(commentNode, {
         characterData: true
     })
-    callNextTick = function () {
+    callNextJob = function () {
         value = value === a ? b : a
         commentNode.data = value
     }
 } else {
-    callNextTick = function (callback) {
+    callNextJob = function (callback) {
         setTimeout(callback, 0)
     }
 }
 
 
-export default function nextTick (callback, context) {
+export default function nextJob (callback, context) {
     var cb = callback
     if (context) {
         var args = []
@@ -55,5 +55,5 @@ export default function nextTick (callback, context) {
         return
     }
     pending = true
-    callNextTick(nextTickHandler)
+    callNextJob(nextJobHandler)
 }

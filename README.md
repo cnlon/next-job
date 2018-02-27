@@ -1,6 +1,7 @@
-# smart-next-tick
+# next-job
 
-[![npm version](https://badge.fury.io/js/smart-next-tick.svg)](https://badge.fury.io/js/smart-next-tick)
+[![Build Status](https://travis-ci.org/cnlon/next-job.svg?branch=master)](https://travis-ci.org/cnlon/next-job)
+[![npm version](https://badge.fury.io/js/next-job.svg)](https://badge.fury.io/js/next-job)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
 ## Another environment agnostic nextTick polyfill
@@ -14,13 +15,13 @@ To be used in environment agnostic modules that need nextTick functionality.
 ## Installation
 
 ```bash
-npm install --save smart-next-tick
+npm install --save next-job
 ```
 
 ## Syntax
 
 ```
-nextTick(func[, context, param1, param2, ...])
+nextJob(func[, context, param1, param2, ...])
 ```
 
 **func**
@@ -37,4 +38,4 @@ Additional parameters which are passed through to `func`.
 
 <hr>
 
-Stealed from [Vue.js](https://github.com/vuejs/vue/blob/dev/src/core/util/env.js#L66-L147) and [next-tick](https://github.com/medikoo/next-tick).
+Stealed from [Vue.js](https://github.com/vuejs/vue/blob/dev/src/core/util/next-tick.js) and [next-tick](https://github.com/medikoo/next-tick).
